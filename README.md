@@ -35,4 +35,4 @@ In this repo I am documenting the mini projects I have done in the domain of VLS
 
 - Co-learning-VLSI-Design-N-Verfication
    - |-> *Home* - Contains LICENSE and the recent / working posts folders.
-   - |-> *all_projects_here* - contains all the folders from 1st project.
+   - |-> *all_other_posts_here* - contains all the folders from 1st project.
