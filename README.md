@@ -5,7 +5,7 @@ Hello and Welcome :)
 In this repo I am documenting the mini projects I have done in the domain of VLSI Frontend.  
 
 - Each of the project folder contains:
-   - Lint-ed Design and Testbench code files.
+   - Lint-ed Design and Testbench code files. (exception for projects 1 to 9)
    - YOSYS Stats and Schematic.
 
 - Tools I have used:
@@ -34,5 +34,5 @@ In this repo I am documenting the mini projects I have done in the domain of VLS
 ## Structure of Repo
 
 - Co-learning-VLSI-Design-N-Verfication
-   - |- Home - Contains LICENSE and the recent / working posts folders.
-   - |- all_previous_posts - contains all the folders from 1st challange.
+   - |- *Home* - Contains LICENSE and the recent / working posts folders.
+   - |- *all_projects_here* - contains all the folders from 1st project.
