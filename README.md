@@ -1,16 +1,20 @@
-# Mini-Projects-CLVDnV_LinkdIn_Series 
+# Mini-Projects-Frontend_VLSI 
 
 Hello and Welcome :)   
 
-This repo is work backup of VLSI Frontend Design and Verification challanges i have implemented & posted on LinkdIn as part of CLVDnV series (CLVDnV stands for Co-learning-VLSI-Design-N-Verfication).  
+In this repo I am documenting the mini projects I have done in the domain of VLSI Frontend.  
 
-You can view all posts in my LinkdIn, click on the link: www.linkedin.com/in/tejesh-sri-abhay-chinnam and navigate to "posts", for more details regarding the problem view the respective post.  
+- Each of the project folder contains:
+   - Lint-ed Design and Testbench code files.
+   - YOSYS Stats and Schematic.
 
+- Tools I have used:
+   - [VS Code](https://code.visualstudio.com)
+   - [EDAplayground](https://edaplayground.com/) (sim-s primarily: Aldec Riviera-Pro, Cadence Xcelium, Siemens Questa, Synopsys VCS or Verilator)
+   - [YOSYS](https://github.com/YosysHQ/yosys) 
+   - [Surfer Waveform viewer](https://gitlab.com/surfer-project/surfer)
 
 ## List of Projects (**INDEX**)
-
-Both design and verification are done for the bellow projects (without an exception).  
-
 
 | Post | Project name |
 |---|---|
@@ -32,14 +36,3 @@ Both design and verification are done for the bellow projects (without an except
 - Co-learning-VLSI-Design-N-Verfication
    - |- Home - Contains LICENSE and the recent / working posts folders.
    - |- all_previous_posts - contains all the folders from 1st challange.
-
-
-## My milestones
-
-As an (about to be) VLSI frontend engineer and my intrest leans towards verification, the below milestones I am planning to achive as early as possible.
-
-start:
-- [x] Verilog based design verification. <-- posts are in this method.
-- [ ] Python based design verification. <-- learning.
-- [ ] SystemVerilog based design verification.
-- [ ] UVM based design verification.
