@@ -16,19 +16,19 @@ In this repo I am documenting the mini projects I have done in the domain of VLS
 
 ## List of Projects (**INDEX**)
 
-| Post | Project name |
-|---|---|
-| Post 11 | Mod N Counter |
-| Post 10 | Up-Down Counter |
-| Post 9 | D Flip Flip (async and sync) |
-| Post 8 | min & max finder from 4 inputs |
-| Post 7 | Excess 3 to BCD converter |
-| Post 6 | Odd parity using 8:1 Mux |
-| Post 5 | 4 to 2 Priority encoder |
-| Post 4 | simple ALU |
-| Post 3 | 3:8 decoder using 2:4 decoder |
-| Post 2 | 4x1 Mux using 2x1 Mux|
-| Post 1 | 7 logic gates|
+| Post | Project name | Language |
+|---|---|---|
+| Post 11 | Mod N Counter | Verilog |
+| Post 10 | Up-Down Counter | Verilog |
+| Post 9 | D Flip Flip (async and sync) | Verilog |
+| Post 8 | min & max finder from 4 inputs | Verilog |
+| Post 7 | Excess 3 to BCD converter | Verilog |
+| Post 6 | Odd parity using 8:1 Mux | Verilog |
+| Post 5 | 4 to 2 Priority encoder | Verilog |
+| Post 4 | simple ALU | Verilog |
+| Post 3 | 3:8 decoder using 2:4 decoder | Verilog |
+| Post 2 | 4x1 Mux using 2x1 Mux| Verilog |
+| Post 1 | 7 logic gates| Verilog |
 
 
 ## Structure of Repo
