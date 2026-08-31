@@ -34,5 +34,5 @@ In this repo I am documenting the mini projects I have done in the domain of VLS
 ## Structure of Repo
 
 - Co-learning-VLSI-Design-N-Verfication
-   - |-> *Home* - Contains LICENSE and the recent / working posts folders.
+   - |-> *Home* - Contains LICENSE and the recent / working posts folders. (I keep recent ~10 posts or so)
    - |-> *all_other_posts_here* - contains all the folders from 1st project.
