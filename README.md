@@ -1,3 +1,5 @@
+![HDL Lint](https://img.shields.io/github/actions/workflow/status/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/hdl-lint.yml?branch=main&label=HDL%20Lint)
+
 # Mini-Projects-Frontend_VLSI 
 
 Hello and Welcome :)   
