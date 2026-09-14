@@ -1,0 +1,95 @@
+name: HDL Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verilator-lint:
+    name: Verilator lint (HDL)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Verilator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y verilator
+          verilator --version
+
+      - name: Find HDL project directories
+        id: files
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
+            START_SHA="$PR_BASE_SHA"
+          else
+            START_SHA="$BEFORE_SHA"
+          fi
+
+          if [ -n "$START_SHA" ] &&
+             [ "$START_SHA" != "0000000000000000000000000000000000000000" ]; then
+            CHANGED="$(git diff --diff-filter=ACMR --name-only \
+              "$START_SHA" "$HEAD_SHA" -- '*.v' '*.sv' || true)"
+          else
+            CHANGED=""
+          fi
+
+          if [ -z "$CHANGED" ]; then
+            echo "No changed HDL files found — will lint all tracked HDL projects."
+            FILES="$(git ls-files '*.v' '*.sv' || true)"
+          else
+            echo "Changed HDL files:"
+            printf '%s\n' "$CHANGED"
+            FILES="$CHANGED"
+          fi
+
+          PROJECTS="$(printf '%s\n' "$FILES" | sed '/^$/d' | xargs -r -n1 dirname | sort -u)"
+          echo "Project directories selected for linting:"
+          printf '%s\n' "$PROJECTS"
+
+          delimiter="hdl_files_${RANDOM}"
+          {
+            echo "files<<$delimiter"
+            printf '%s\n' "$PROJECTS"
+            echo "$delimiter"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Run Verilator lint
+        env:
+          FILES: ${{ steps.files.outputs.files }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "$FILES" ]; then
+            echo "No HDL files found to lint — nothing to do."
+            exit 0
+          fi
+          echo "Linting project directories:"
+          echo "$FILES"
+          while IFS= read -r project; do
+            [ -z "$project" ] && continue
+            project_files=()
+            while IFS= read -r file; do
+              project_files+=("$file")
+            done < <(git ls-files "$project/*.v" "$project/*.sv")
+            [ "${#project_files[@]}" -eq 0 ] && continue
+            echo "=== Linting $project ==="
+            verilator --lint-only -Wall --Wno-fatal "${project_files[@]}"
+          done <<< "$FILES"

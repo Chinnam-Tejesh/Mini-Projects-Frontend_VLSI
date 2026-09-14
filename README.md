@@ -1,4 +1,4 @@
-![HDL Lint](https://img.shields.io/github/actions/workflow/status/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/hdl-lint.yml?branch=main&label=HDL%20Lint)
+[![HDL Lint](https://img.shields.io/github/actions/workflow/status/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/linting.yml?branch=main&label=HDL%20Lint)](https://github.com/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/actions/workflows/linting.yml)
 
 # Mini-Projects-Frontend_VLSI 
 
