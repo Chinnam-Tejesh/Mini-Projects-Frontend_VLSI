@@ -91,5 +91,5 @@ jobs:
             done < <(git ls-files "$project/*.v" "$project/*.sv")
             [ "${#project_files[@]}" -eq 0 ] && continue
             echo "=== Linting $project ==="
-            verilator --lint-only -Wall --Wno-fatal "${project_files[@]}"
+            verilator --lint-only -Wall --Wno-fatal --timing "${project_files[@]}"
           done <<< "$FILES"
