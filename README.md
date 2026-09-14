@@ -1,6 +1,6 @@
 # Mini-Projects-Frontend_VLSI 
-![Static Badge](https://img.shields.io/badge/repo_Status%20-%20active%20-%20brightgreen%20)
-[![HDL Lint](https://img.shields.io/github/actions/workflow/status/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/linting.yml?branch=main&label=HDL%20Lint)](https://github.com/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/actions/workflows/linting.yml)
+![Static Badge](https://img.shields.io/badge/repo_Status%20-%20active%20-%20brightgreen)
+[![HDL Lint](https://img.shields.io/github/actions/workflow/status/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/linting.yml?branch=main&label=Lint%20Status)](https://github.com/Chinnam-Tejesh/Mini-Projects-Frontend_VLSI/actions/workflows/linting.yml)
 
 Hello and Welcome :)   
 
